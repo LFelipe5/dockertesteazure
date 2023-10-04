@@ -11,11 +11,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-import environ
-
-# Inicializando variáveis de ambiente
-env = environ.Env()
-environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = 'django-insecure-d(_!c0h(ps#=m7&li1bf-%(0d$xdp&1xn_35&w3#v@n-dj_&o5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -132,10 +127,10 @@ WSGI_APPLICATION = "sigback.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('NAME'),
-        'USER': env('USER'), 
-        'PASSWORD': env('PASSWORD'),
-        'HOST': env('HOST'),
+        'NAME': 'postgres',
+        'USER': 'postgres', 
+        'PASSWORD': 'Postgres2022!',
+        'HOST': 'postgres',
         'PORT': '5432',
     }
 }
